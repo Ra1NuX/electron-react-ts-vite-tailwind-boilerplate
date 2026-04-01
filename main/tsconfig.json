@@ -6,10 +6,9 @@
       "esModuleInterop": true,
       "forceConsistentCasingInFileNames": true,
       "isolatedModules": true,
-      "jsx": "preserve",
-      "lib": ["dom", "es2017"],
+      "lib": ["es2022"],
       "module": "ESNext",
-      "moduleResolution": "node",
+      "moduleResolution": "bundler",
       "noEmit": false,
       "noFallthroughCasesInSwitch": true,
       "noUnusedLocals": true,
@@ -17,8 +16,12 @@
       "resolveJsonModule": true,
       "skipLibCheck": true,
       "strict": true,
-      "target": "esnext",
-      "outDir": "../app"
+      "target": "es2022",
+      "outDir": "../app",
+
+      "paths": {
+        "@core/*": ["./*"]
+      }
     },
     "exclude": ["node_modules"],
     "include": ["**/*.ts", "**/*.tsx", "**/*.js", "index.cts", "index.ts"]

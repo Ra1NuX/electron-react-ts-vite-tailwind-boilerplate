@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-main-onyx: #0f0f0f;
+  --color-main-obsidian: #1a1a1a;
+  --color-divider-dark: #2a2a2a;
+  --color-light-bg: #f7f7f7;
+  --color-light-hover: #eaeaea;
+  --color-close-red: #ff0000dd;
+}
+
+@utility drag {
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@utility no-drag {
+  -webkit-app-region: no-drag;
+}
+
+nav[class*="drag"] {
+  z-index: 2147483647 !important;
+  position: relative;
+}
+
+@layer components {
+  .tileStyleButton {
+    @apply h-8 w-8 flex justify-center items-center rounded cursor-pointer
+      dark:hover:bg-main-obsidian/80 hover:bg-light-hover
+      dark:text-white text-black
+      transition-colors duration-200 ease-in-out;
+  }
+}

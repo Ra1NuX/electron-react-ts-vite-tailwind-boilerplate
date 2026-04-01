@@ -17,7 +17,6 @@ const config = {
     repo: '{{github.repo}}',
     releaseType: process.env.CHANNEL === 'beta' ? 'prerelease' : 'release',
     publishAutoUpdate: true,
-
   },
   artifactName: process.env.CHANNEL === 'beta' ? 'Setup-${productName}${version}.${ext}' : 'Setup-${productName}${version}.${ext}',
   win: {

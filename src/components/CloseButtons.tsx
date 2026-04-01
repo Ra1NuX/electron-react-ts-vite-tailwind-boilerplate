@@ -1,8 +1,12 @@
+import useElectron from "@/hooks/use-electron";
+
 const CloseButtons = () => {
+  const electron = useElectron();
+
   return (
-    <div className="float-right h-full flex leading-[30px] dark:bg-main-dark no-drag gap-1">
+    <div className="flex items-center justify-end h-full no-drag gap-1 w-fit">
       <button
-        onClick={() => window?.electron?.minimize()}
+        onClick={() => electron?.minimize()}
         className="tileStyleButton"
       >
         <svg
@@ -18,7 +22,7 @@ const CloseButtons = () => {
         </svg>
       </button>
       <button
-        onClick={() => window?.electron?.maximize()}
+        onClick={() => electron?.maximize()}
         className="tileStyleButton"
       >
         <svg
@@ -38,8 +42,8 @@ const CloseButtons = () => {
         </svg>
       </button>
       <button
-        onClick={() => window?.electron?.close()}
-        className="tileStyleButton hover:bg-[#ff0000dd] dark:hover:bg-[#ff0000dd] hover:text-white"
+        onClick={() => electron?.close()}
+        className="tileStyleButton hover:bg-close-red dark:hover:bg-close-red hover:text-white"
       >
         <span className="text-2xl font-extralight mb-1.5">&times;</span>
       </button>

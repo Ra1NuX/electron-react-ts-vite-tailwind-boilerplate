@@ -5,7 +5,6 @@
     "lib": ["ES2023"],
     "module": "NodeNext",
     "skipLibCheck": true,
-    "outDir": "/app/renderer",
 
     /* Bundler mode */
     "moduleResolution": "nodenext",

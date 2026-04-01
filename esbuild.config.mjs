@@ -19,7 +19,11 @@ build({
     // 'app-root-path',
     'node:path',
   ],
+  alias: {
+    '@core': join(__dirname, 'main'),
+  },
   format: 'cjs',
+  outExtension: { '.js': '.cjs' },
   loader: {
     '.txt': 'file', // Load .txt files as text
   },
